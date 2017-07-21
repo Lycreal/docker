@@ -1,8 +1,11 @@
 #First run
-docker run -itd --name "asf" --restart=always -v <config directory>:/config:rw lycreal/asf
+docker run -it --name "asf" --restart=always -v <config directory>:/config:rw lycreal/asf
 
 #Run
-docker run -it --name "asf" --restart=always -v <config directory>:/config:rw lycreal/asf
+docker run -itd --name "asf" --restart=always -v <config directory>:/config:rw lycreal/asf
 
 #Control
 docker exec -it asf mono /ASF.exe --client "<command>"
+
+#View logs
+docker logs --tail=20 asf

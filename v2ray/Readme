@@ -1,0 +1,1 @@
+docker run -itd --name v2ray -p 4000:4000 -v <config directory>:/config:rw lycreal/v2ray
